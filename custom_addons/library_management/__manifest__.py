@@ -9,6 +9,7 @@
         'views/book_views.xml',
         'views/author_views.xml',
         'views/borrowing_views.xml',
+        'views/menu_views.xml',
     ],
     'installable': True,
     'application': True,

@@ -1,0 +1,25 @@
+<odoo>
+  <!-- القائمة الجذرية -->
+  <menuitem id="menu_library_root" name="Library" sequence="10"/>
+
+  <!-- قائمة الكتب -->
+  <menuitem id="menu_library_books"
+            name="Books"
+            parent="menu_library_root"
+            action="action_library_book"
+            sequence="1"/>
+
+  <!-- قائمة المؤلفين -->
+  <menuitem id="menu_library_authors"
+            name="Authors"
+            parent="menu_library_root"
+            action="action_library_author"
+            sequence="2"/>
+
+  <!-- قائمة السجلات -->
+  <menuitem id="menu_library_borrowing"
+            name="Borrowing Records"
+            parent="menu_library_root"
+            action="action_library_borrowing"
+            sequence="3"/>
+</odoo>
