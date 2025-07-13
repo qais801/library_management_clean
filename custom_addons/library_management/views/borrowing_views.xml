@@ -1,0 +1,51 @@
+<odoo>
+  <record id="view_library_borrowing_form" model="ir.ui.view">
+    <field name="name">library.borrowing.form</field>
+    <field name="model">library.borrowing</field>
+    <field name="arch" type="xml">
+      <form>
+        <sheet>
+          <group>
+            <field name="book_id"/>
+            <field name="partner_id"/>
+            <field name="borrow_date"/>
+            <field name="return_date"/>
+            <field name="returned"/>
+          </group>
+          <footer>
+            <button string="Mark as Returned"
+                    type="object"
+                    name="action_mark_returned"
+                    attrs="{'invisible': [('returned','=',True)]}"
+                    class="btn-primary"/>
+          </footer>
+        </sheet>
+      </form>
+    </field>
+  </record>
+
+  <record id="view_library_borrowing_tree" model="ir.ui.view">
+    <field name="name">library.borrowing.tree</field>
+    <field name="model">library.borrowing</field>
+    <field name="arch" type="xml">
+      <tree>
+        <field name="book_id"/>
+        <field name="partner_id"/>
+        <field name="borrow_date"/>
+        <field name="return_date"/>
+        <field name="returned"/>
+      </tree>
+    </field>
+  </record>
+
+  <record id="action_library_borrowing" model="ir.actions.act_window">
+    <field name="name">Borrowing Records</field>
+    <field name="res_model">library.borrowing</field>
+    <field name="view_mode">tree,form</field>
+    <field name="domain">[('returned', '=', False)]</field>
+  </record>
+
+  <menuitem id="menu_library_borrowing" name="Borrowing Records"
+            parent="menu_library_root"
+            action="action_library_borrowing"/>
+</odoo>

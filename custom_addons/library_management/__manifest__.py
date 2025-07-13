@@ -1,13 +1,14 @@
 {
     'name': 'Library Management',
     'version': '1.0',
-    'summary': 'Manage books, authors, and borrowing records',
-    'description': 'A custom module to manage library operations: books, authors, borrowing',
-    'author': 'Qais',
-    'category': 'Services',
+    'summary': 'Manage books, authors, and borrowing records.',
     'depends': ['base'],
     'data': [
-        # XML files for views and security will go here later
+        'security/security.xml',
+        'security/ir.model.access.csv',
+        'views/book_views.xml',
+        'views/author_views.xml',
+        'views/borrowing_views.xml',
     ],
     'installable': True,
     'application': True,
