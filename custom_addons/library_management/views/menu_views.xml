@@ -1,6 +1,6 @@
 <odoo>
   <!-- القائمة الجذرية -->
-  <menuitem id="menu_library_root" name="Library" sequence="10"/>
+  <menuitem id="menu_library_root" name="Library" sequence="1"/>
 
   <!-- قائمة الكتب -->
   <menuitem id="menu_library_books"
