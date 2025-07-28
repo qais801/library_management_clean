@@ -1,0 +1,20 @@
+<odoo>
+  <record id="view_res_partner_form_library" model="ir.ui.view">
+    <field name="name">res.partner.form.library</field>
+    <field name="model">res.partner</field>
+    <field name="inherit_id" ref="base.view_partner_form"/>
+    <field name="arch" type="xml">
+      <xpath expr="//sheet/group" position="inside">
+        <field name="library_card_id" readonly="1"/>
+      </xpath>
+      <xpath expr="//form/sheet" position="after">
+        <div class="oe_button_box" name="button_box">
+          <button name="%(action_library_membership_requests)d" type="action"
+                  class="oe_stat_button" icon="fa-id-card"
+                  context="{'default_partner_id': active_id}"
+                  string="Memberships"/>
+        </div>
+      </xpath>
+    </field>
+  </record>
+</odoo>

@@ -1,0 +1,10 @@
+<odoo>
+  <data noupdate="1">
+    <record id="product_library_membership" model="product.product">
+      <field name="name">Library Membership</field>
+      <field name="list_price">10.0</field>
+      <field name="type">service</field>
+      <field name="is_library_membership">True</field>
+    </record>
+  </data>
+</odoo>

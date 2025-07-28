@@ -1,0 +1,6 @@
+<odoo>
+  <menuitem id="menu_library_invoice_root" name="Library" parent="account.menu_finance"/>
+  <menuitem id="menu_library_invoice_books" name="Books" parent="menu_library_invoice_root" action="action_library_books"/>
+  <menuitem id="menu_library_invoice_members" name="Members" parent="menu_library_invoice_root" action="action_library_members"/>
+  <menuitem id="menu_library_invoice_memberships" name="Membership Invoices" parent="menu_library_invoice_root" action="action_library_membership_invoices"/>
+</odoo>
