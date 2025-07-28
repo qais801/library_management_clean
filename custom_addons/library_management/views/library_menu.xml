@@ -1,5 +1,9 @@
 <odoo>
-  <menuitem id="menu_library_members" name="Members" parent="menu_library_books" action="action_library_members"/>
-  <menuitem id="menu_library_membership_requests" name="Membership Requests" parent="menu_library_books" action="action_library_membership_requests"/>
-  <menuitem id="menu_library_invoices" name="Invoices" parent="menu_library_books" action="action_library_membership_invoices"/>
+  <menuitem id="menu_library_root" name="Library" sequence="10"/>
+
+  <menuitem id="menu_library_books" name="Books" parent="menu_library_root" action="action_library_books"/>
+  <menuitem id="menu_library_members" name="Members" parent="menu_library_root" action="action_library_members"/>
+  <menuitem id="menu_library_membership_requests" name="Membership Requests" parent="menu_library_root" action="action_library_membership_requests"/>
+  <menuitem id="menu_library_invoices" name="Invoices" parent="menu_library_root" action="action_library_membership_invoices"/>
 </odoo>
+
