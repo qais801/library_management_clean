@@ -2,6 +2,7 @@
   <record id="view_library_borrowing_form" model="ir.ui.view">
     <field name="name">library.borrowing.form</field>
     <field name="model">library.borrowing</field>
+    <field name="type">form</field>
     <field name="arch" type="xml">
       <form>
         <sheet>
@@ -24,9 +25,10 @@
     </field>
   </record>
 
-  <record id="view_library_borrowing_tree" model="ir.ui.view">
-    <field name="name">library.borrowing.tree</field>
+  <record id="view_library_borrowing_list" model="ir.ui.view">
+    <field name="name">library.borrowing.list</field>
     <field name="model">library.borrowing</field>
+    <field name="type">list</field>
     <field name="arch" type="xml">
       <list>
         <field name="book_id"/>

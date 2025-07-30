@@ -7,32 +7,34 @@
         <sheet>
           <group>
             <field name="name"/>
-            <field name="book_ids">
-              <list>
-                <field name="name"/>
-                <field name="publish_date"/>
-              </list>
-            </field>
+            <!-- هنا إحذف الـ tree داخل book_ids أو استبدله بـ kanban مثلا -->
+            <field name="book_ids" widget="many2many_tags"/>
           </group>
         </sheet>
       </form>
     </field>
   </record>
 
-  <record id="view_library_author_tree" model="ir.ui.view">
-    <field name="name">library.author.tree</field>
+  <record id="view_library_author_list" model="ir.ui.view">
+    <field name="name">library.author.list</field>
     <field name="model">library.author</field>
     <field name="arch" type="xml">
-      <list>
-        <field name="name"/>
-      </list>
+      <kanban>
+        <templates>
+          <t t-name="kanban-box">
+            <div class="oe_kanban_card">
+              <strong><field name="name"/></strong>
+            </div>
+          </t>
+        </templates>
+      </kanban>
     </field>
   </record>
 
   <record id="action_library_author" model="ir.actions.act_window">
     <field name="name">Authors</field>
     <field name="res_model">library.author</field>
-    <field name="view_mode">list,form</field>
+    <field name="view_mode">kanban,form</field>
   </record>
 
   <menuitem id="menu_library_authors" name="Authors"

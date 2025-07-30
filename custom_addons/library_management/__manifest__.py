@@ -1,5 +1,6 @@
 {
-    'name': 'Library Management',
+    'name': 'Library_Management',
+    
     'version': '1.0',
     'summary': 'Manage books, authors, borrowing records, and memberships.',
     'depends': ['base', 'account', 'contacts'],  # إضافة contacts
