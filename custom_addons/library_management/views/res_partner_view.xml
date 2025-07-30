@@ -4,17 +4,20 @@
     <field name="model">res.partner</field>
     <field name="inherit_id" ref="base.view_partner_form"/>
     <field name="arch" type="xml">
-      <xpath expr="//sheet/group" position="inside">
+
+      <!-- إضافة حقل library_card_id بعد حقل vat -->
+      <xpath expr="//field[@name='vat']" position="after">
         <field name="library_card_id" readonly="1"/>
       </xpath>
-      <xpath expr="//form/sheet" position="after">
-        <div class="oe_button_box" name="button_box">
-          <button name="%(action_library_membership_requests)d" type="action"
-                  class="oe_stat_button" icon="fa-id-card"
-                  context="{'default_partner_id': active_id}"
-                  string="Memberships"/>
-        </div>
+
+      <!-- زر Smart Button داخل oe_button_box -->
+      <xpath expr="//div[@class='oe_button_box']" position="inside">
+        <button name="%(action_library_membership_requests)d" type="action"
+                class="oe_stat_button" icon="fa-id-card"
+                context="{'default_partner_id': id}"
+                string="Memberships"/>
       </xpath>
+
     </field>
   </record>
 </odoo>

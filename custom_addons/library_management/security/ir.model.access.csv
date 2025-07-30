@@ -1,4 +1,7 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_library_book,Library Book,model_library_book,,1,1,1,1
+access_library_author,Library Author,model_library_author,,1,1,1,1
+access_library_borrowing,Library Borrowing,model_library_borrowing,,1,1,1,1
 access_library_membership_request,Library Membership Request,model_library_membership_request,,1,1,1,1
 access_library_membership_line,Library Membership Line,model_library_membership_line,,1,1,1,1
-access_library_borrowing,Library Borrowing,model_library_borrowing,,1,1,1,1
+access_res_partner_library_member,Library Member (Res Partner),model_res_partner,,1,0,0,0
