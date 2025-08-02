@@ -1,0 +1,113 @@
+msgid ""
+msgstr ""
+"Language: ar\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: views/membership_request_views.xml:5
+msgid "Membership Request"
+msgstr "طلب عضوية"
+
+#: views/membership_request_views.xml:10
+msgid "Member"
+msgstr "العضو"
+
+#: views/membership_request_views.xml:15
+msgid "Registration Date"
+msgstr "تاريخ التسجيل"
+
+#: views/membership_request_views.xml:20
+msgid "Membership Expiry Date"
+msgstr "تاريخ انتهاء العضوية"
+
+#: views/membership_request_views.xml:25
+msgid "Membership Card Number"
+msgstr "رقم بطاقة العضوية"
+
+#: views/membership_request_views.xml:30
+msgid "Membership Status"
+msgstr "حالة العضوية"
+
+#: views/membership_request_views.xml:35
+msgid "Print Membership Report"
+msgstr "طباعة تقرير العضوية"
+
+#: models/membership_request.py:50
+msgid "Draft"
+msgstr "مسودة"
+
+#: models/membership_request.py:51
+msgid "Confirmed"
+msgstr "مؤكد"
+
+#: models/membership_request.py:52
+msgid "Paid"
+msgstr "مدفوع"
+
+#: models/membership_request.py:53
+msgid "Active"
+msgstr "نشط"
+
+#: views/book_views.xml:10
+msgid "Books"
+msgstr "الكتب"
+
+#: views/author_views.xml:10
+msgid "Authors"
+msgstr "المؤلفون"
+
+#: views/borrowing_views.xml:10
+msgid "Borrowing Records"
+msgstr "سجلات الإعارة"
+
+#: menu.xml:5
+msgid "Library"
+msgstr "المكتبة"
+
+#: buttons.xml:5
+msgid "Confirm"
+msgstr "تأكيد"
+
+#: buttons.xml:10
+msgid "Mark as Paid"
+msgstr "تأكيد الدفع"
+
+#: reports/membership_request_report_template.xml:10
+msgid "Membership Request Report"
+msgstr "تقرير طلب العضوية"
+
+#: reports/membership_requests_report_template.xml:10
+msgid "All Membership Requests Report"
+msgstr "تقرير جميع طلبات العضوية"
+
+#: reports/membership_request_report_template.xml:20
+msgid "Member Name:"
+msgstr "اسم العضو:"
+
+#: reports/membership_request_report_template.xml:25
+msgid "Registration Date:"
+msgstr "تاريخ التسجيل:"
+
+#: reports/membership_request_report_template.xml:30
+msgid "Expiry Date:"
+msgstr "تاريخ الانتهاء:"
+
+#: reports/membership_request_report_template.xml:35
+msgid "Membership Card Number:"
+msgstr "رقم بطاقة العضوية:"
+
+#: reports/membership_request_report_template.xml:40
+msgid "Membership Status:"
+msgstr "حالة العضوية:"
+
+#: reports/membership_request_report_template.xml:45
+msgid "Active"
+msgstr "نشط"
+
+#: reports/membership_request_report_template.xml:46
+msgid "Expired"
+msgstr "منتهي"
+
+#: list_view.xml:5
+msgid "Print All Membership Reports"
+msgstr "طباعة تقارير جميع العضويات"

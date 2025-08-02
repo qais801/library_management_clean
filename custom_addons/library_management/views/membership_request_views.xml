@@ -5,10 +5,15 @@
     <field name="arch" type="xml">
       <form string="Membership Request">
 
-        
         <header>
           <button name="action_confirm" type="object" string="Confirm" class="btn-primary"/>
           <button name="action_mark_paid" type="object" string="Mark as Paid" class="btn-success"/>
+          
+          <!-- زر طباعة التقرير -->
+          <button name="print_membership_report"
+                  type="object"
+                  string="Print Membership Report"
+                  class="btn-secondary"/>
         </header>
 
         <sheet>

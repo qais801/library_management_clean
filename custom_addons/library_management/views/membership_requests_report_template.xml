@@ -1,0 +1,34 @@
+<odoo>
+  <template id="membership_requests_report_template">
+    <t t-call="web.html_container">
+      <div class="page">
+        <h2>All Membership Requests Report</h2>
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>Member Name</th>
+              <th>Registration Date</th>
+              <th>Expiry Date</th>
+              <th>Membership Card</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <t t-foreach="docs" t-as="o">
+              <tr>
+                <td><span t-esc="o.partner_id.name"/></td>
+                <td><span t-esc="o.registration_date"/></td>
+                <td><span t-esc="o.end_date"/></td>
+                <td><span t-esc="o.card_id"/></td>
+                <td>
+                  <t t-if="o.state == 'active'">Active</t>
+                  <t t-else="">Expired</t>
+                </td>
+              </tr>
+            </t>
+          </tbody>
+        </table>
+      </div>
+    </t>
+  </template>
+</odoo>

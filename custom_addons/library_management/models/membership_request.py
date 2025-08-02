@@ -50,3 +50,8 @@ class LibraryMembershipRequest(models.Model):
             rec.partner_id.library_card_id = card_id
             rec.partner_id.is_library_member = True
             rec.state = 'active'
+
+    # دالة طباعة التقرير الفردي
+    def print_membership_report(self):
+        return self.env.ref('library_management.membership_request_report').report_action(self)
+
