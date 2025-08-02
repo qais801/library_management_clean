@@ -9,17 +9,38 @@
             action="action_library_book"
             sequence="1"/>
 
-  <!-- قائمة المؤلفين -->
+  <!-- قائمة المؤلفين تحت قائمة الكتب -->
   <menuitem id="menu_library_authors"
             name="Authors"
-            parent="menu_library_root"
+            parent="menu_library_books"
             action="action_library_author"
             sequence="2"/>
 
-  <!-- قائمة السجلات -->
+  <!-- قائمة السجلات تحت قائمة الكتب -->
   <menuitem id="menu_library_borrowing"
             name="Borrowing Records"
-            parent="menu_library_root"
+            parent="menu_library_books"
             action="action_library_borrowing"
             sequence="3"/>
+
+  <!-- قائمة الأعضاء تحت قائمة الكتب -->
+  <menuitem id="menu_library_members"
+            name="Members"
+            parent="menu_library_books"
+            action="action_library_members"
+            sequence="4"/>
+
+  <!-- طلبات العضوية تحت قائمة الكتب -->
+  <menuitem id="menu_library_membership_requests"
+            name="Membership Requests"
+            parent="menu_library_books"
+            action="action_library_membership_requests"
+            sequence="5"/>
+
+  <!-- الفواتير تحت قائمة الكتب -->
+  <menuitem id="menu_library_invoices"
+            name="Invoices"
+            parent="menu_library_books"
+            action="action_library_invoices"
+            sequence="6"/>
 </odoo>

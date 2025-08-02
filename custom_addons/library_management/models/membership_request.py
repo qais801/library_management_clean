@@ -1,4 +1,5 @@
 from odoo import models, fields, api
+from odoo.exceptions import UserError
 import random
 
 class LibraryMembershipRequest(models.Model):
@@ -36,9 +37,16 @@ class LibraryMembershipRequest(models.Model):
         self.state = 'confirmed'
 
     def action_mark_paid(self):
-        self.state = 'paid'
-        card_id = f"LIB-{random.randint(100000, 999999)}"
-        self.card_id = card_id
-        self.partner_id.library_card_id = card_id
-        self.partner_id.is_library_member = True
-        self.state = 'active'
+        for rec in self:
+            if not rec.invoice_id:
+                raise UserError("No invoice linked to this request.")
+
+            if rec.invoice_id.payment_state != 'paid':
+                raise UserError("The invoice must be fully paid before activating membership.")
+
+            # If invoice is paid, proceed
+            card_id = f"LIB-{random.randint(100000, 999999)}"
+            rec.card_id = card_id
+            rec.partner_id.library_card_id = card_id
+            rec.partner_id.is_library_member = True
+            rec.state = 'active'
