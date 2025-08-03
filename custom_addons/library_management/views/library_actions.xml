@@ -24,4 +24,22 @@
     <field name="res_model">library.book</field>
     <field name="view_mode">list,form</field>
   </record>
+
+  <record id="action_library_author" model="ir.actions.act_window">
+    <field name="name">Authors</field>
+    <field name="res_model">library.author</field>
+    <field name="view_mode">list,form</field>
+  </record>
+
+  <record id="action_library_borrowing" model="ir.actions.act_window">
+    <field name="name">Borrowing Records</field>
+    <field name="res_model">library.borrowing</field>
+    <field name="view_mode">list,form</field>
+  </record>
+
+  <record id="action_library_invoices" model="ir.actions.act_window">
+    <field name="name">Invoices</field>
+    <field name="res_model">account.move</field>
+    <field name="view_mode">list,form</field>
+  </record>
 </odoo>
