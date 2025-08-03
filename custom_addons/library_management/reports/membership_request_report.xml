@@ -1,0 +1,21 @@
+<odoo>
+  <!-- تقرير فردي لطلب عضوية واحد -->
+  <record id="membership_request_report" model="ir.actions.report">
+    <field name="name">Membership Request Report</field>
+    <field name="model">library.membership.request</field>
+    <field name="report_type">qweb-pdf</field>
+    <field name="report_name">library_management.membership_request_report_template</field>
+    <field name="file">library_management.membership_request_report_template</field>
+    <field name="print_report_name">'Membership Request - %s' % (object.partner_id.name)</field>
+  </record>
+
+  <!-- تقرير متعدد لكل الطلبات -->
+  <record id="membership_requests_report" model="ir.actions.report">
+    <field name="name">All Membership Requests Report</field>
+    <field name="model">library.membership.request</field>
+    <field name="report_type">qweb-pdf</field>
+    <field name="report_name">library_management.membership_requests_report_template</field>
+    <field name="file">library_management.membership_requests_report_template</field>
+    <field name="print_report_name">'Membership Requests Report'</field>
+  </record>
+</odoo>

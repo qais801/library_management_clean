@@ -17,10 +17,9 @@
         'views/library_actions.xml',
         'views/library_invoice_menu.xml',
 
-        
         'reports/membership_request_report.xml',
-        'views/membership_request_report_template.xml',
-        'views/membership_requests_report_template.xml',
+        'reports/membership_request_report_template.xml',
+        'reports/membership_requests_report_template.xml',
     ],
     'i18n': [
         'i18n/ar.po',
@@ -28,6 +27,3 @@
     'installable': True,
     'application': True,
 }
-
-
-
